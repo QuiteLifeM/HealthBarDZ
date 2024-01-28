@@ -425,6 +425,7 @@ GameObject:
   - component: {fileID: 480560668}
   - component: {fileID: 480560667}
   - component: {fileID: 480560666}
+  - component: {fileID: 480560669}
   m_Layer: 5
   m_Name: Button Heal
   m_TagString: Untagged
@@ -495,7 +496,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 480560667}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 480560669}
+        m_TargetAssemblyTypeName: Heal, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &480560667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,6 +547,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480560664}
   m_CullTransparentMesh: 1
+--- !u!114 &480560669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480560664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b82ed175ea3b95449933d5f90a52142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 1224707054}
+  _smoothSlider: {fileID: 530259406}
+  _currentHealth: 50
+  text: {fileID: 1971242709}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,7 +1041,7 @@ GameObject:
   - component: {fileID: 737905940}
   - component: {fileID: 737905939}
   - component: {fileID: 737905938}
-  - component: {fileID: 737905941}
+  - component: {fileID: 737905942}
   m_Layer: 5
   m_Name: Button Attack
   m_TagString: Untagged
@@ -1084,8 +1113,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 737905941}
-        m_TargetAssemblyTypeName: ButtonAttack, Assembly-CSharp
+      - m_Target: {fileID: 737905942}
+        m_TargetAssemblyTypeName: Attack, Assembly-CSharp
         m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
@@ -1134,7 +1163,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737905936}
   m_CullTransparentMesh: 1
---- !u!114 &737905941
+--- !u!114 &737905942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1143,11 +1172,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 737905936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51a40c112e806574a81886e7f2fa8708, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e86bf37cc0a02d47ba82042ae833704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1224707054}
-  currentHealth: 100
+  _slider: {fileID: 1224707054}
+  _smoothSlider: {fileID: 530259406}
+  _currentHealth: 50
   text: {fileID: 1971242709}
 --- !u!1 &781430986
 GameObject:
@@ -1532,7 +1562,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 737905941}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: 
         m_Mode: 1
