@@ -499,7 +499,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 480560669}
         m_TargetAssemblyTypeName: Heal, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: OnButtonClickHeal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1041,7 +1041,7 @@ GameObject:
   - component: {fileID: 737905940}
   - component: {fileID: 737905939}
   - component: {fileID: 737905938}
-  - component: {fileID: 737905942}
+  - component: {fileID: 737905941}
   m_Layer: 5
   m_Name: Button Attack
   m_TagString: Untagged
@@ -1113,9 +1113,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 737905942}
-        m_TargetAssemblyTypeName: Attack, Assembly-CSharp
-        m_MethodName: OnButtonClick
+      - m_Target: {fileID: 737905941}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: OnButtonClickAttack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1163,7 +1163,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737905936}
   m_CullTransparentMesh: 1
---- !u!114 &737905942
+--- !u!114 &737905941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1172,7 +1172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 737905936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e86bf37cc0a02d47ba82042ae833704, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b82ed175ea3b95449933d5f90a52142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _slider: {fileID: 1224707054}
