@@ -498,7 +498,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 480560669}
-        m_TargetAssemblyTypeName: Heal, Assembly-CSharp
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnButtonClickHeal
         m_Mode: 1
         m_Arguments:
